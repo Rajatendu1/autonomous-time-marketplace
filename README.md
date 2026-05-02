@@ -1,5 +1,7 @@
 # TimeFoundry
 
+Repository: `autonomous-time-marketplace`
+
 TimeFoundry is a zero-cost autonomous-company prototype for a marketplace where people trade time, skills, favors, and availability through a credit ledger instead of cash-first transactions.
 
 The project has two connected products:
@@ -69,4 +71,3 @@ Before ending a work session, update `docs/resume-handoff.md` with:
 - What is working.
 - What is blocked.
 - The next highest-leverage task.
-
