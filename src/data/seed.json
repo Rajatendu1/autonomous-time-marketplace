@@ -1,0 +1,138 @@
+{
+  "marketplace": {
+    "creditsName": "minutes",
+    "startingBalance": 240,
+    "categories": ["Design", "Engineering", "Language", "Career", "Care", "Admin", "Fitness", "Creative"],
+    "featuredOffers": [
+      {
+        "id": "offer-ux-review",
+        "name": "Mira Chen",
+        "title": "UX teardown for early products",
+        "category": "Design",
+        "minutes": 45,
+        "rate": 45,
+        "rating": 4.9,
+        "completed": 128,
+        "availability": "Today, 7:30 PM",
+        "trust": "Verified mentor",
+        "description": "Screen-share review of flows, friction, copy, and conversion risks for MVPs."
+      },
+      {
+        "id": "offer-debug",
+        "name": "Arjun Rao",
+        "title": "Pair debugging for JavaScript apps",
+        "category": "Engineering",
+        "minutes": 60,
+        "rate": 60,
+        "rating": 4.8,
+        "completed": 94,
+        "availability": "Tomorrow, 10:00 AM",
+        "trust": "Top responder",
+        "description": "Focused bug hunt with a written fix summary and suggested tests."
+      },
+      {
+        "id": "offer-spanish",
+        "name": "Lucia Torres",
+        "title": "Conversational Spanish practice",
+        "category": "Language",
+        "minutes": 30,
+        "rate": 25,
+        "rating": 5,
+        "completed": 211,
+        "availability": "Weekdays",
+        "trust": "Community steward",
+        "description": "Natural conversation, pronunciation notes, and a short vocabulary recap."
+      },
+      {
+        "id": "offer-career",
+        "name": "Nadia Okafor",
+        "title": "Career narrative and interview prep",
+        "category": "Career",
+        "minutes": 50,
+        "rate": 55,
+        "rating": 4.9,
+        "completed": 76,
+        "availability": "Friday, 6:00 PM",
+        "trust": "Background checked",
+        "description": "Clarify your story, practice answers, and leave with a stronger positioning note."
+      }
+    ],
+    "requests": [
+      {
+        "id": "request-tax",
+        "title": "Need help organizing freelance invoices",
+        "category": "Admin",
+        "budget": 40,
+        "urgency": "This week"
+      },
+      {
+        "id": "request-logo",
+        "title": "Need a second pair of eyes on logo sketches",
+        "category": "Creative",
+        "budget": 30,
+        "urgency": "Today"
+      },
+      {
+        "id": "request-walk",
+        "title": "Accountability call before morning workout",
+        "category": "Fitness",
+        "budget": 15,
+        "urgency": "Daily"
+      }
+    ]
+  },
+  "company": {
+    "dailyAgentBudget": {
+      "planner": 6,
+      "designer": 5,
+      "engineer": 8,
+      "infra": 4,
+      "support": 4,
+      "growth": 3,
+      "governance": 2
+    },
+    "backlog": [
+      {
+        "id": "TF-001",
+        "title": "Define time credit ledger rules",
+        "layer": "Product",
+        "priority": 1,
+        "status": "ready",
+        "costRisk": "none"
+      },
+      {
+        "id": "TF-002",
+        "title": "Build static marketplace prototype",
+        "layer": "Engineering",
+        "priority": 1,
+        "status": "in_progress",
+        "costRisk": "none"
+      },
+      {
+        "id": "TF-003",
+        "title": "Create autonomous agent registry",
+        "layer": "Orchestration",
+        "priority": 2,
+        "status": "ready",
+        "costRisk": "none"
+      },
+      {
+        "id": "TF-004",
+        "title": "Draft dispute and safety flow",
+        "layer": "Support",
+        "priority": 2,
+        "status": "ready",
+        "costRisk": "none"
+      },
+      {
+        "id": "TF-005",
+        "title": "Prepare free deployment path",
+        "layer": "Infrastructure",
+        "priority": 3,
+        "status": "ready",
+        "costRisk": "free-tier-review"
+      }
+    ]
+  }
+}
+

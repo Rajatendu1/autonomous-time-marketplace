@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "TF-001",
+      "title": "Define time credit ledger rules",
+      "layer": "Product",
+      "priority": 1,
+      "status": "ready",
+      "owner": "planner",
+      "costRisk": "none",
+      "acceptance": [
+        "Minute credits have earning, spending, hold, release, and dispute states.",
+        "Rules fit a free prototype without payment processing."
+      ]
+    },
+    {
+      "id": "TF-002",
+      "title": "Build static marketplace prototype",
+      "layer": "Engineering",
+      "priority": 1,
+      "status": "in_progress",
+      "owner": "engineer",
+      "costRisk": "none",
+      "acceptance": [
+        "Users can browse offers.",
+        "Users can book using minute credits.",
+        "Users can post a request."
+      ]
+    },
+    {
+      "id": "TF-003",
+      "title": "Create autonomous agent registry",
+      "layer": "Orchestration",
+      "priority": 2,
+      "status": "ready",
+      "owner": "planner",
+      "costRisk": "none",
+      "acceptance": [
+        "Agents have roles, permissions, budgets, and stop conditions.",
+        "Registry is machine-readable."
+      ]
+    },
+    {
+      "id": "TF-004",
+      "title": "Draft dispute and safety flow",
+      "layer": "Support",
+      "priority": 2,
+      "status": "ready",
+      "owner": "support",
+      "costRisk": "none",
+      "acceptance": [
+        "Dispute states are documented.",
+        "Safety escalation is separated from ordinary support."
+      ]
+    },
+    {
+      "id": "TF-005",
+      "title": "Prepare free deployment path",
+      "layer": "Infrastructure",
+      "priority": 3,
+      "status": "ready",
+      "owner": "infra",
+      "costRisk": "free-tier-review",
+      "acceptance": [
+        "Static deployment can run on GitHub Pages.",
+        "CI validates app files without paid services."
+      ]
+    }
+  ]
+}
+

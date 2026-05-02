@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "agents": [
+    {
+      "id": "planner",
+      "role": "Direction and prioritization",
+      "dailyLimit": 6,
+      "permissions": ["read_docs", "write_specs", "prioritize_backlog"],
+      "outputs": ["daily_plan", "risk_notes", "handoff_summary"],
+      "stopConditions": ["needs_human_strategy_decision", "paid_resource_required"]
+    },
+    {
+      "id": "designer",
+      "role": "Product design and UX",
+      "dailyLimit": 5,
+      "permissions": ["read_product_docs", "write_design_specs", "edit_frontend"],
+      "outputs": ["wireframe_notes", "copy_changes", "accessibility_findings"],
+      "stopConditions": ["brand_decision_required", "user_research_required"]
+    },
+    {
+      "id": "engineer",
+      "role": "Application implementation",
+      "dailyLimit": 8,
+      "permissions": ["edit_code", "run_tests", "open_pull_request"],
+      "outputs": ["code_changes", "test_results", "implementation_handoff"],
+      "stopConditions": ["tests_blocked", "schema_migration_risk", "secrets_required"]
+    },
+    {
+      "id": "infra",
+      "role": "Free infrastructure and deployment",
+      "dailyLimit": 4,
+      "permissions": ["edit_workflows", "run_ci", "prepare_deploy"],
+      "outputs": ["pipeline_status", "deployment_notes", "cost_risk_report"],
+      "stopConditions": ["paid_resource_required", "production_approval_required"]
+    },
+    {
+      "id": "support",
+      "role": "Trust, safety, and user support",
+      "dailyLimit": 4,
+      "permissions": ["write_help_docs", "triage_issues", "draft_support_responses"],
+      "outputs": ["support_queue", "dispute_summary", "policy_gap"],
+      "stopConditions": ["legal_review_required", "real_user_message_required"]
+    },
+    {
+      "id": "growth",
+      "role": "Organic growth",
+      "dailyLimit": 3,
+      "permissions": ["write_content", "propose_experiments", "analyze_public_metrics"],
+      "outputs": ["content_plan", "experiment_brief", "seo_notes"],
+      "stopConditions": ["paid_campaign_requested", "brand_approval_required"]
+    },
+    {
+      "id": "governance",
+      "role": "Policy, privacy, and cost guardrails",
+      "dailyLimit": 2,
+      "permissions": ["review_costs", "write_policy_notes", "block_risky_actions"],
+      "outputs": ["approval_queue", "risk_register", "cost_audit"],
+      "stopConditions": ["human_approval_required"]
+    }
+  ]
+}
+

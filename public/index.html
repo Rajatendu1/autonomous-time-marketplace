@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TimeFoundry</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">TF</span>
+        <span>TimeFoundry</span>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="#market">Market</a>
+        <a href="#ledger">Ledger</a>
+        <a href="#company">Company OS</a>
+      </nav>
+      <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle theme" title="Toggle theme">◐</button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Autonomous company prototype</p>
+          <h1>Trade time like a real asset.</h1>
+          <p class="lede">Offer an hour, request help, earn credits, and let a free-first agent company keep the marketplace improving around the clock.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#market">Explore time blocks</a>
+            <a class="button secondary" href="#company">View agent layer</a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-label="Marketplace health">
+          <div>
+            <span class="metric-label">Available balance</span>
+            <strong id="balanceHero">240 min</strong>
+          </div>
+          <div>
+            <span class="metric-label">Open exchanges</span>
+            <strong>38</strong>
+          </div>
+          <div>
+            <span class="metric-label">Autonomy mode</span>
+            <strong>Guarded</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="section band" id="market">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Live marketplace</p>
+            <h2>Find time worth trading</h2>
+          </div>
+          <label class="search">
+            <span>Search</span>
+            <input id="searchInput" type="search" placeholder="Skill, person, category">
+          </label>
+        </div>
+        <div class="filters" id="filters" aria-label="Category filters"></div>
+        <div class="offer-grid" id="offerGrid"></div>
+      </section>
+
+      <section class="section split" id="ledger">
+        <div>
+          <p class="eyebrow">Credit ledger</p>
+          <h2>Every exchange has a clean trail</h2>
+          <p class="body-copy">The MVP uses minute credits as the internal unit. Booking creates a hold, completion settles the ledger, and disputes pause settlement until support resolves the issue.</p>
+          <div class="ledger">
+            <div><span>Spendable</span><strong id="spendable">240</strong></div>
+            <div><span>Held</span><strong id="held">0</strong></div>
+            <div><span>Earned</span><strong id="earned">0</strong></div>
+          </div>
+        </div>
+        <form class="request-form" id="requestForm">
+          <h3>Post a time request</h3>
+          <label>
+            <span>What do you need?</span>
+            <input name="title" required placeholder="Example: Review my pitch deck">
+          </label>
+          <label>
+            <span>Category</span>
+            <select name="category" required>
+              <option>Design</option>
+              <option>Engineering</option>
+              <option>Career</option>
+              <option>Admin</option>
+              <option>Care</option>
+            </select>
+          </label>
+          <label>
+            <span>Budget in minutes</span>
+            <input name="budget" type="number" min="5" max="240" value="30" required>
+          </label>
+          <button class="button primary" type="submit">Post request</button>
+        </form>
+      </section>
+
+      <section class="section band" id="requests">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Demand board</p>
+            <h2>Requests waiting for a match</h2>
+          </div>
+        </div>
+        <div class="request-list" id="requestList"></div>
+      </section>
+
+      <section class="section company" id="company">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Autonomous company OS</p>
+            <h2>Agents keep the startup moving</h2>
+          </div>
+          <button class="button secondary" id="runAgent" type="button">Run planning loop</button>
+        </div>
+        <div class="agent-grid">
+          <article>
+            <span>Planner</span>
+            <strong>Prioritizes the next useful work</strong>
+          </article>
+          <article>
+            <span>Engineer</span>
+            <strong>Builds, tests, and fixes scoped issues</strong>
+          </article>
+          <article>
+            <span>Infra</span>
+            <strong>Runs free CI, deploys, and health checks</strong>
+          </article>
+          <article>
+            <span>Governance</span>
+            <strong>Blocks paid tools and risky actions</strong>
+          </article>
+        </div>
+        <pre class="agent-output" id="agentOutput">Planning loop idle.</pre>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
+
