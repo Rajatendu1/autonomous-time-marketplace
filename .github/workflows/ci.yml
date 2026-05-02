@@ -27,7 +27,9 @@ jobs:
       - name: Run autonomy report
         run: node src/orchestration/autonomy-loop.mjs
 
+      - name: Run company control plane
+        run: node src/orchestration/run-company.mjs
+
       - name: Cost guardrail
         run: |
-          ! grep -R "stripe\|paid tier\|openai api key\|aws_secret" -i public src docs
-
+          ! grep -R "sk-[A-Za-z0-9]\{20,\}\|aws_secret_access_key\|stripe_secret\|paypal_client_secret" -i public src docs

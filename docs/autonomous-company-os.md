@@ -60,3 +60,10 @@ An agent must stop and checkpoint when:
 
 The first implementation is `src/orchestration/autonomy-loop.mjs`. It is small on purpose: it reads seed state, chooses prioritized work, and writes a report. This can later become a queue-backed multi-agent scheduler.
 
+The guarded company control plane is `src/orchestration/run-company.mjs`. It reads backlog, agent registry, and policy rules, then writes a daily company report and marks each active item as autonomous, blocked, or requiring human approval.
+
+## GitHub Autonomy
+
+`.github/workflows/autonomous-company.yml` runs the guarded company loop every six hours on GitHub Actions free minutes. It commits generated reports back to the repo. This keeps the company memory moving without requiring chat approval for every planning cycle.
+
+Autonomous work is still bounded by `src/orchestration/policies.json`. Paid resources, real user messaging, legal/privacy changes, and production-risk actions require human approval.

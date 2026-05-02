@@ -38,6 +38,11 @@ Branch: `main`
 - Verified `node --check public/app.js` and `node --check src/orchestration/autonomy-loop.mjs`.
 - Pushed the initial project to GitHub repo `Rajatendu1/autonomous-time-marketplace`.
 - Merged the repo's original one-line README commit into local history and kept the richer project README.
+- Added guarded autonomy policies in `src/orchestration/policies.json`.
+- Added `src/orchestration/run-company.mjs`, which evaluates active backlog items, writes daily company reports, and annotates backlog items with autonomy decisions.
+- Added scheduled GitHub Actions company loop in `.github/workflows/autonomous-company.yml`.
+- Added GitHub issue templates for agent tasks and human approval requests.
+- Added label definitions in `.github/labels.yml`.
 
 ## Operating Instructions For Future Chat
 
@@ -49,10 +54,11 @@ Branch: `main`
 
 ## Highest-Priority Next Tasks
 
-1. Check GitHub Actions in `Rajatendu1/autonomous-time-marketplace` and confirm CI/Pages setup status.
-2. Expand the marketplace into separate views for profile, booking detail, trust, and admin.
-3. Add lightweight tests once a package manager is introduced.
-4. Add a real issue-to-agent workflow that turns backlog items into implementation tasks.
+1. Check GitHub Actions in `Rajatendu1/autonomous-time-marketplace` and confirm CI/Pages/autonomous-company workflow status.
+2. Decide whether to allow GitHub Pages deployment; the policy layer currently marks `TF-005` as `needs-human-approval`.
+3. Expand the marketplace into separate views for profile, booking detail, trust, and admin.
+4. Add lightweight tests once a package manager is introduced.
+5. Add a real issue-to-agent workflow that turns backlog items into implementation tasks.
 
 ## Known Constraints
 
@@ -69,6 +75,8 @@ Open `public/index.html` directly in a browser. No local server is required for 
 
 ```powershell
 node src/orchestration/autonomy-loop.mjs
+node src/orchestration/run-company.mjs
 node --check public/app.js
+node --check src/orchestration/run-company.mjs
 node --check src/orchestration/autonomy-loop.mjs
 ```

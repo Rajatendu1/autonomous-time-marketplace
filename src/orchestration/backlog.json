@@ -12,7 +12,10 @@
       "acceptance": [
         "Minute credits have earning, spending, hold, release, and dispute states.",
         "Rules fit a free prototype without payment processing."
-      ]
+      ],
+      "autonomyDecision": "autonomous",
+      "policyRule": "risk-safe-repo-work",
+      "lastEvaluated": "2026-05-02T10:41:12.872Z"
     },
     {
       "id": "TF-002",
@@ -26,7 +29,10 @@
         "Users can browse offers.",
         "Users can book using minute credits.",
         "Users can post a request."
-      ]
+      ],
+      "autonomyDecision": "autonomous",
+      "policyRule": "risk-safe-repo-work",
+      "lastEvaluated": "2026-05-02T10:41:12.872Z"
     },
     {
       "id": "TF-003",
@@ -39,7 +45,10 @@
       "acceptance": [
         "Agents have roles, permissions, budgets, and stop conditions.",
         "Registry is machine-readable."
-      ]
+      ],
+      "autonomyDecision": "autonomous",
+      "policyRule": "risk-safe-repo-work",
+      "lastEvaluated": "2026-05-02T10:41:12.872Z"
     },
     {
       "id": "TF-004",
@@ -52,7 +61,10 @@
       "acceptance": [
         "Dispute states are documented.",
         "Safety escalation is separated from ordinary support."
-      ]
+      ],
+      "autonomyDecision": "autonomous",
+      "policyRule": "risk-safe-repo-work",
+      "lastEvaluated": "2026-05-02T10:41:12.872Z"
     },
     {
       "id": "TF-005",
@@ -65,8 +77,11 @@
       "acceptance": [
         "Static deployment can run on GitHub Pages.",
         "CI validates app files without paid services."
-      ]
+      ],
+      "autonomyDecision": "needs-human-approval",
+      "policyRule": "risk-paid-resource",
+      "lastEvaluated": "2026-05-02T10:41:12.872Z"
     }
-  ]
+  ],
+  "lastCompanyRun": "2026-05-02T10:41:12.872Z"
 }
-

@@ -31,6 +31,8 @@ Paid services are not allowed unless explicitly approved and documented in `docs
 - `public/app.js` - marketplace interaction logic.
 - `src/data/seed.json` - starter marketplace and agent data.
 - `src/orchestration/autonomy-loop.mjs` - dependency-free autonomous planning loop.
+- `src/orchestration/run-company.mjs` - guarded autonomous company control-plane runner.
+- `src/orchestration/policies.json` - autonomy, cost, and human-approval rules.
 - `docs/vision.md` - startup vision and product definition.
 - `docs/autonomous-company-os.md` - agent hierarchy and operating model.
 - `docs/free-resource-policy.md` - approved free stack and cost guardrails.
@@ -49,6 +51,7 @@ Optional local checks:
 
 ```powershell
 node src/orchestration/autonomy-loop.mjs
+node src/orchestration/run-company.mjs
 ```
 
 ## Automation Model

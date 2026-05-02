@@ -1,0 +1,56 @@
+name: Agent task
+description: Work item generated or prepared for an autonomous company agent.
+title: "[agent] "
+labels: ["agent-task"]
+body:
+  - type: dropdown
+    id: owner
+    attributes:
+      label: Owner agent
+      options:
+        - planner
+        - designer
+        - engineer
+        - infra
+        - support
+        - growth
+        - governance
+    validations:
+      required: true
+  - type: dropdown
+    id: risk
+    attributes:
+      label: Risk level
+      options:
+        - autonomous
+        - needs-human-approval
+        - blocked
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: What should be true when this is done?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Keep criteria testable and concrete.
+      value: |
+        - 
+    validations:
+      required: true
+  - type: textarea
+    id: guardrails
+    attributes:
+      label: Guardrails
+      description: Cost, legal, safety, privacy, or deployment limits.
+      value: |
+        - No paid services.
+        - Stop if secrets or production user data are required.
+    validations:
+      required: true
+

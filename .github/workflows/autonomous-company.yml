@@ -1,0 +1,43 @@
+name: autonomous-company-loop
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+concurrency:
+  group: autonomous-company-loop
+  cancel-in-progress: false
+
+jobs:
+  run-company:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run guarded company loop
+        run: node src/orchestration/run-company.mjs
+
+      - name: Run base autonomy report
+        run: node src/orchestration/autonomy-loop.mjs
+
+      - name: Commit generated company reports
+        run: |
+          git config user.name "timefoundry-agent"
+          git config user.email "timefoundry-agent@users.noreply.github.com"
+          git add docs/generated/*.md docs/generated/company-runs/*.md docs/generated/agent-runs/*.md src/orchestration/backlog.json
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit."
+          else
+            git commit -m "chore: run autonomous company loop"
+            git push
+          fi

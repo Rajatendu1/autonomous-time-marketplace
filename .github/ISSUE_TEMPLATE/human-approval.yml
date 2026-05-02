@@ -1,0 +1,33 @@
+name: Human approval
+description: Approval request for actions the autonomous company may not take alone.
+title: "[approval] "
+labels: ["needs-human-approval"]
+body:
+  - type: textarea
+    id: request
+    attributes:
+      label: Approval request
+      description: What does the system want permission to do?
+    validations:
+      required: true
+  - type: dropdown
+    id: reason
+    attributes:
+      label: Why approval is required
+      options:
+        - Possible cost
+        - Production deployment
+        - Legal or policy change
+        - Privacy or user data
+        - Real user communication
+        - Safety issue
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: rollback
+    attributes:
+      label: Rollback or mitigation plan
+    validations:
+      required: true
+

@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "autonomyMode": "guarded",
+  "costPolicy": {
+    "defaultDecision": "deny",
+    "allowedCost": 0,
+    "allowedResourceTypes": [
+      "github-free",
+      "github-actions-free",
+      "github-pages-free",
+      "browser-local-storage",
+      "local-script",
+      "markdown-docs",
+      "open-source-library"
+    ],
+    "blockedTerms": [
+      "paid tier",
+      "billing",
+      "credit card",
+      "stripe",
+      "paypal",
+      "aws_secret",
+      "openai_api_key",
+      "subscription"
+    ]
+  },
+  "riskRules": [
+    {
+      "id": "risk-paid-resource",
+      "matchCostRisk": ["paid", "free-tier-review"],
+      "decision": "needs-human-approval",
+      "reason": "Any external service that might become billable requires review."
+    },
+    {
+      "id": "risk-real-users",
+      "matchLabels": ["real-user-message", "legal", "privacy", "safety"],
+      "decision": "needs-human-approval",
+      "reason": "Real users, legal policy, privacy, and safety actions are gated."
+    },
+    {
+      "id": "risk-safe-repo-work",
+      "matchCostRisk": ["none"],
+      "decision": "autonomous",
+      "reason": "Repo-local planning, docs, checks, and low-risk prototype work can proceed."
+    }
+  ],
+  "allowedAutonomousActions": [
+    "read_repo",
+    "write_generated_reports",
+    "update_backlog_status",
+    "write_docs",
+    "run_static_checks",
+    "open_github_issue",
+    "open_pull_request"
+  ],
+  "blockedAutonomousActions": [
+    "spend_money",
+    "create_paid_resource",
+    "delete_user_data",
+    "send_bulk_user_messages",
+    "change_legal_terms_for_real_users",
+    "deploy_schema_migration_to_production"
+  ]
+}
+

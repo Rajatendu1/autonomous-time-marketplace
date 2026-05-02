@@ -1,0 +1,125 @@
+# Daily Company Report
+
+Generated: 2026-05-02T10:41:12.867Z
+Autonomy mode: guarded
+Allowed spend: 0
+
+## Executive Summary
+
+The company loop found 5 active backlog items. 4 can proceed autonomously and 1 require review or gating.
+
+## Next Autonomous Work
+
+- TF-001: Define time credit ledger rules (planner)
+- TF-002: Build static marketplace prototype (engineer)
+- TF-003: Create autonomous agent registry (planner)
+- TF-004: Draft dispute and safety flow (support)
+
+## Human Approval Queue
+
+- TF-005: Prepare free deployment path - Any external service that might become billable requires review.
+
+## Issue Drafts
+
+# TF-001: Define time credit ledger rules
+
+Owner agent: planner
+Layer: Product
+Priority: 1
+Autonomy decision: autonomous
+Policy rule: risk-safe-repo-work
+
+## Acceptance Criteria
+
+- Minute credits have earning, spending, hold, release, and dispute states.
+- Rules fit a free prototype without payment processing.
+
+## Guardrail
+
+Repo-local planning, docs, checks, and low-risk prototype work can proceed.
+
+---
+
+# TF-002: Build static marketplace prototype
+
+Owner agent: engineer
+Layer: Engineering
+Priority: 1
+Autonomy decision: autonomous
+Policy rule: risk-safe-repo-work
+
+## Acceptance Criteria
+
+- Users can browse offers.
+- Users can book using minute credits.
+- Users can post a request.
+
+## Guardrail
+
+Repo-local planning, docs, checks, and low-risk prototype work can proceed.
+
+---
+
+# TF-003: Create autonomous agent registry
+
+Owner agent: planner
+Layer: Orchestration
+Priority: 2
+Autonomy decision: autonomous
+Policy rule: risk-safe-repo-work
+
+## Acceptance Criteria
+
+- Agents have roles, permissions, budgets, and stop conditions.
+- Registry is machine-readable.
+
+## Guardrail
+
+Repo-local planning, docs, checks, and low-risk prototype work can proceed.
+
+---
+
+# TF-004: Draft dispute and safety flow
+
+Owner agent: support
+Layer: Support
+Priority: 2
+Autonomy decision: autonomous
+Policy rule: risk-safe-repo-work
+
+## Acceptance Criteria
+
+- Dispute states are documented.
+- Safety escalation is separated from ordinary support.
+
+## Guardrail
+
+Repo-local planning, docs, checks, and low-risk prototype work can proceed.
+
+---
+
+# TF-005: Prepare free deployment path
+
+Owner agent: infra
+Layer: Infrastructure
+Priority: 3
+Autonomy decision: needs-human-approval
+Policy rule: risk-paid-resource
+
+## Acceptance Criteria
+
+- Static deployment can run on GitHub Pages.
+- CI validates app files without paid services.
+
+## Guardrail
+
+Any external service that might become billable requires review.
+
+## Blocked Autonomous Actions
+
+- spend_money
+- create_paid_resource
+- delete_user_data
+- send_bulk_user_messages
+- change_legal_terms_for_real_users
+- deploy_schema_migration_to_production

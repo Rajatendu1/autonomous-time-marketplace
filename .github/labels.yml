@@ -1,0 +1,23 @@
+labels:
+  - name: agent-task
+    color: "0f766e"
+    description: Work prepared for an autonomous company agent.
+  - name: needs-human-approval
+    color: "b42318"
+    description: Work blocked until a human approves it.
+  - name: agent:planner
+    color: "285c8f"
+    description: Direction and prioritization work.
+  - name: agent:engineer
+    color: "0f766e"
+    description: Implementation and test work.
+  - name: agent:infra
+    color: "6b7280"
+    description: CI, deployment, and infrastructure work.
+  - name: risk:paid
+    color: "b42318"
+    description: Might require billable resources.
+  - name: risk:safety
+    color: "c26536"
+    description: Trust and safety review required.
+
