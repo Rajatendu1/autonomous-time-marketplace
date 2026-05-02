@@ -10,6 +10,12 @@ TimeFoundry: a zero-cost autonomous startup building a time-trading marketplace 
 
 `C:\Users\rajat\Documents\Codex\2026-05-02\lets-build-a-awesome-marketplace-for`
 
+## GitHub
+
+Remote: `https://github.com/Rajatendu1/autonomous-time-marketplace`
+
+Branch: `main`
+
 ## Latest Session Notes
 
 - Started from an empty workspace.
@@ -30,6 +36,8 @@ TimeFoundry: a zero-cost autonomous startup building a time-trading marketplace 
 - Updated the autonomy loop to write timestamped logs in `docs/generated/agent-runs/`.
 - Verified `node src/orchestration/autonomy-loop.mjs` runs successfully.
 - Verified `node --check public/app.js` and `node --check src/orchestration/autonomy-loop.mjs`.
+- Pushed the initial project to GitHub repo `Rajatendu1/autonomous-time-marketplace`.
+- Merged the repo's original one-line README commit into local history and kept the richer project README.
 
 ## Operating Instructions For Future Chat
 
@@ -41,11 +49,10 @@ TimeFoundry: a zero-cost autonomous startup building a time-trading marketplace 
 
 ## Highest-Priority Next Tasks
 
-1. Commit the initial scaffold when ready.
-2. Create a GitHub repository and push `main` to activate CI and Pages deployment.
-3. Expand the marketplace into separate views for profile, booking detail, trust, and admin.
-4. Add lightweight tests once a package manager is introduced.
-5. Add a real issue-to-agent workflow that turns backlog items into implementation tasks.
+1. Check GitHub Actions in `Rajatendu1/autonomous-time-marketplace` and confirm CI/Pages setup status.
+2. Expand the marketplace into separate views for profile, booking detail, trust, and admin.
+3. Add lightweight tests once a package manager is introduced.
+4. Add a real issue-to-agent workflow that turns backlog items into implementation tasks.
 
 ## Known Constraints
 
