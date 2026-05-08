@@ -15,7 +15,7 @@
       ],
       "autonomyDecision": "autonomous",
       "policyRule": "risk-safe-repo-work",
-      "lastEvaluated": "2026-05-07T19:55:17.967Z"
+      "lastEvaluated": "2026-05-08T03:55:01.899Z"
     },
     {
       "id": "TF-002",
@@ -32,7 +32,7 @@
       ],
       "autonomyDecision": "autonomous",
       "policyRule": "risk-safe-repo-work",
-      "lastEvaluated": "2026-05-07T19:55:17.967Z"
+      "lastEvaluated": "2026-05-08T03:55:01.899Z"
     },
     {
       "id": "TF-003",
@@ -48,7 +48,7 @@
       ],
       "autonomyDecision": "autonomous",
       "policyRule": "risk-safe-repo-work",
-      "lastEvaluated": "2026-05-07T19:55:17.967Z"
+      "lastEvaluated": "2026-05-08T03:55:01.899Z"
     },
     {
       "id": "TF-004",
@@ -64,7 +64,7 @@
       ],
       "autonomyDecision": "autonomous",
       "policyRule": "risk-safe-repo-work",
-      "lastEvaluated": "2026-05-07T19:55:17.967Z"
+      "lastEvaluated": "2026-05-08T03:55:01.899Z"
     },
     {
       "id": "TF-005",
@@ -80,8 +80,8 @@
       ],
       "autonomyDecision": "needs-human-approval",
       "policyRule": "risk-paid-resource",
-      "lastEvaluated": "2026-05-07T19:55:17.967Z"
+      "lastEvaluated": "2026-05-08T03:55:01.899Z"
     }
   ],
-  "lastCompanyRun": "2026-05-07T19:55:17.967Z"
+  "lastCompanyRun": "2026-05-08T03:55:01.899Z"
 }
