@@ -1,6 +1,6 @@
 # Autonomy Report
 
-Generated: 2026-10-25T11:33:19.997Z
+Generated: 2026-10-25T16:24:24.626Z
 
 Cost guardrail: no paid resources requested by current backlog.
 
